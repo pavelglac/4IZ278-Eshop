@@ -1,0 +1,39 @@
+.arrow {
+
+  text-align: center;
+  margin-bottom: 4em;
+  color: $font-color-main;
+  cursor: pointer;
+
+  @media (min-width: $mobile-breakpoint) {
+
+    margin-bottom: 2em;
+
+  }
+
+}
+.bounce {
+
+  -moz-animation: bounce 1.7s infinite;
+  -webkit-animation: bounce 1.7s infinite;
+  animation: bounce 1.7s infinite;
+
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+
+    transform: translateY(0);
+
+  }
+  40% {
+
+    transform: translateY(-30px);
+
+  }
+  60% {
+
+    transform: translateY(-15px);
+
+  }
+}

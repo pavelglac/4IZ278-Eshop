@@ -1,0 +1,44 @@
+﻿CREATE DATABASE hustadatabaze;
+
+CREATE USER 'uzivatel'@'localhost' IDENTIFIED BY 'hodnesilnyheslo';
+
+GRANT ALL PRIVILEGES ON `hustadatabaze`.* TO "uzivatel"@"localhost";
+
+FLUSH PRIVILEGES;
+
+CREATE TABLE users
+(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	email VARCHAR(255) NOT NULL,
+	password VARCHAR(255) NOT NULL
+)
+CHARACTER SET utf8, ENGINE = InnoDB
+;
+
+CREATE UNIQUE INDEX in_users_email ON users(email);
+
+CREATE TABLE products
+(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(255),
+	icon VARCHAR(255),
+	description TEXT
+
+)
+CHARACTER SET utf8, ENGINE = InnoDB
+;
+
+INSERT INTO products (name,icon,description) VALUES ("Statická stránka","fas fa-globe","Stránka je vhodná pro většinu webů, kde se nepřepokládá publikování příspěvků. Web bude velice rychlý a bude fungovat na sto procent i bez údržby.");
+INSERT INTO products (name,icon,description) VALUES ("Wordpress šablona","fab fa-wordpress","Kvalitně zpracovaná šablona od základu, kdy máte vše pod svou kontrolou již od začátku. Nejedná se o upravení již existující šablony, ale o vytvoření zcela nové pro Vaše potřeby.");
+INSERT INTO products (name,icon,description) VALUES ("Optimalizace stránky","fas fa-wrench","Stránka je vhodná pro většinu webů, kde se nepřepokládá publikování příspěvků. Web bude velice rychlý a bude fungovat na sto procent i bez údržby.");
+
+CREATE TABLE carts
+(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	user_id int,
+	product_id int,
+	CONSTRAINT fk_carts_users FOREIGN KEY (user_id) REFERENCES users(id),
+	CONSTRAINT fk_carts_products FOREIGN KEY (product_id) REFERENCES products(id)
+)
+CHARACTER SET utf8, ENGINE = InnoDB
+;

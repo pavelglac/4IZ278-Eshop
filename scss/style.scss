@@ -1,0 +1,24 @@
+@import 'core/normalize';
+@import 'core/variables';
+
+@import 'layout/body';
+@import 'layout/layout';
+@import 'layout/background:.scss';
+
+@import 'common/text.scss';
+@import 'common/common.scss';
+
+@import 'components/particles.scss';
+@import 'components/hamburger.scss';
+@import 'components/nav.scss';
+@import 'components/basket.scss';
+@import 'components/arrow.scss';
+@import 'components/typewriter.scss';
+@import 'components/logo.scss';
+@import 'components/section.scss';
+
+@import 'pages/welcome.scss';
+@import 'pages/about.scss';
+@import 'pages/products.scss';
+@import 'pages/login.scss';
+@import 'pages/cart.scss';

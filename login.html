@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Eshop</title>
+	<link rel="stylesheet" type="text/css" href="css/style.min.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous" async=""></script>
+</head>
+<body>
+
+	<script>function p() {var link = document.createElement( "link" );link.href = "https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css";link.type = "text/css";link.rel = "stylesheet";document.getElementsByTagName( "head" )[0].appendChild( link );AOS.init();}</script>
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js" async="" defer="" onload="p();"></script>	
+	
+	<div class="background"></div>
+	
+	<div class="welcome container" id="welcome">
+
+		<div id="particles-js" style="position: absolute;top: 0px;left: 0px;"></div>
+		<script>function l(){particlesJS.load("particles-js","particlesjs-config.json",function(){console.log("callback - particles.js config loaded")});}</script>
+		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" onload="l()" async=""></script>	
+
+		<header>
+
+			<nav class="site-nav">
+
+				<div class="logo">
+					<a href="#welcome"><i class="fab fa-css3 fa-lg"></i></a>
+				</div>
+
+				<div class="menu-toggle" onclick="toggle()">
+					<div class="hamburger"></div>
+				</div>
+
+				<div class="menu">
+						<ul class="open" id="ul">
+							<li><a href="#about">O mně</a></li>
+							<li><a href="#">Produkty</a></li>
+							<li><a href="#">Kontakt</a></li>
+						</ul>
+
+					<div class="basket">
+						<i class="fas fa-lg fa-shopping-basket"></i>
+						<p class="only-pc">empty</p>					
+					</div>
+
+				</div>
+
+			</nav>
+		</header>
+		<script>
+			function pt() {
+			document.getElementById("lock").innerHTML = "Registrace";
+			document.getElementById("method").setAttribute("value", "2"); 
+			document.getElementById("buttonlogintoregister").innerHTML = "Registrovat";
+
+			document.getElementById("footer-text").innerHTML = "Máte účet?";
+			var span = document.createElement("span");
+			span.setAttribute("class", "sign-up");
+			span.setAttribute("onclick", "px()");
+			span.setAttribute("id", "register");
+			document.getElementById("footer-text").appendChild(span);
+			document.getElementById("register").innerHTML = " Přihlašte se";
+
+
+
+   			}
+			function px() {
+			document.getElementById("lock").innerHTML = "Přihlášení";
+			document.getElementById("method").setAttribute("value", "1"); 
+			document.getElementById("buttonlogintoregister").innerHTML = "Přihlásit";
+
+			document.getElementById("footer-text").innerHTML = "Nemáte účet?";
+			var span = document.createElement("span");
+			span.setAttribute("class", "sign-up");
+			span.setAttribute("onclick", "pt()");
+			span.setAttribute("id", "register");
+			document.getElementById("footer-text").appendChild(span);
+			document.getElementById("register").innerHTML = " Zaregistrujte se";
+
+
+   			}
+		</script>
+
+		<div class="box center" id="typewriter">
+
+			<div id="header">
+				<div id="cont-lock"><i class="material-icons lock" id="lock">Přihlášení</i></div>
+				<div id="bottom-head"></div>
+			</div> 
+
+			<form action="" method="post">
+
+				<div class="group">      
+					<input class="inputMaterial" name="email" type="email" required>
+					<input style="display: none;" type="text" name="type" value="1" id="method" required>
+					<span class="highlight"></span>
+					<span class="bar"></span>
+					<label>E-mail</label>
+				</div>
+
+				<div class="group">      
+					<input class="inputMaterial" type="password" name="password" required>
+					<span class="highlight"></span>
+					<span class="bar"></span>
+					<label>Heslo</label>
+				</div>
+
+				<div class="fb-login text-center"><a href="nic.cz">Přihlásit se přes Facebook</a></div>
+
+				<button id="buttonlogintoregister" type="submit">Přihlásit</button>
+				
+			</form>
+
+			<div id="footer-box"><p class="footer-text" id="footer-text">Nemáte účet?<span class="sign-up" onclick="pt()" id="register"> Zaregistrujte se</span></p></div>
+
+		</div>
+
+
+		<div class="empty"></div>
+
+	</div>
+
+
+
+
+	<script src="release/js/main.js" async="" defer=""></script>
+
+</body>
+</html>

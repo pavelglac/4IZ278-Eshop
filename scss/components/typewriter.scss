@@ -1,0 +1,27 @@
+.typewrite{
+
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+
+  .wrap{
+
+    font-weight: bold;
+    font-size: calc(2em + 1vw)
+
+  }
+
+}
+.typewriter{
+
+
+  min-height: 7em 
+
+}
+
+.invisible{
+
+  display: none;
+
+}

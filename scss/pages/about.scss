@@ -1,0 +1,11 @@
+.about{
+
+	position: relative;
+	min-height: 30vh;
+	background-color: $background-color-main;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	z-index:10;
+
+}

@@ -1,0 +1,77 @@
+.basket{
+
+	position: absolute;
+	top: 0.5em;
+	width: 33.33%;
+	right: 0;
+
+	@media (min-width: $mobile-breakpoint) {
+
+		margin-top: auto;
+		margin-bottom: auto;
+		border-radius: 1em;
+		border: 0.2em solid $font-color-main;
+		width: 8em;
+		height: 2.5em;
+		position: relative;
+		top: auto;
+		right: auto;
+
+
+	}
+	.fa-shopping-basket{
+
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-left: 11.11vw;
+		@media (min-width: $mobile-breakpoint) {
+
+			margin-left: 0.5em;
+
+		}
+		color: $font-color-main;
+
+	}
+
+	p{
+
+		font-weight: bold;
+		color: $font-color-main;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-left: 0.5em;
+
+	}
+
+	a{
+
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		@media (min-width: $mobile-breakpoint) {
+
+			display: flex;
+			position: relative;
+			top: auto;
+			right: auto;
+
+
+	}
+
+
+	}
+
+}
+
+.only-pc{
+
+	display: none;
+
+	@media (min-width: $mobile-breakpoint) {
+
+		display: inline;
+
+	}
+
+}

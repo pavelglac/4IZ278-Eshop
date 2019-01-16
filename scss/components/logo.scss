@@ -1,0 +1,26 @@
+.logo{
+
+	display:block;
+	position: absolute;
+	top: 0.5em;
+	text-align: center;
+	width: 33.33%;
+	left: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+
+	@media (min-width: $mobile-breakpoint) {
+
+		text-align: left;
+
+
+	}
+
+	.fa-css3{
+
+		margin-left: auto;
+		color: $font-color-main;
+
+	}
+
+}

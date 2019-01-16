@@ -1,0 +1,82 @@
+.cart{
+
+  margin-bottom: 10em;
+  color: $section-color-background;
+  z-index: 10;
+  min-width: 30%;
+  max-width: 60em;
+  background:rgba(255,255,255,0.7);
+
+  .item{
+
+    padding: 1em;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    background:rgba(255,255,255,1);
+
+  
+
+  .icon{
+
+    padding: 1rem;
+
+  }
+
+  a{
+
+    margin-top: auto;
+    margin-bottom: auto;
+    color: $section-color-background;    
+    font-size:3em;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    text-decoration: none;
+
+  }
+
+  }
+  
+}
+@mixin transition($transition-property, $transition-time, $method) {
+    transition: $transition-property $transition-time $method;
+}
+a.btn {
+  float: left;
+  width: 6em;
+  padding: .75em 0;
+  border-radius: 0 1em 1em 0;
+  text-align: center;
+  margin: 2em;
+  &:hover {
+     border: 1px solid #f69679;
+     background: #f69679;
+  }
+}
+.btn {
+     &:link , &:visited {
+      text-decoration: none;
+      letter-spacing: -.015em;
+      font-size: 1em;
+      padding: 1em 3em;
+      color: #fff;
+      background: #82ca9c;
+      font-weight: bold;
+      border-radius: 50px;
+      float: right;
+      text-align: right;
+       @include transition(all, .25s, linear);
+    }
+      &:after {
+      content: "\276f";
+      padding: .5em;
+      position: relative;
+      right:0;
+       @include transition(all, .15s, linear);
+      
+    }
+
+  
+}

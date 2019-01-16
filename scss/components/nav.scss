@@ -1,0 +1,164 @@
+nav {
+
+  margin: 1em;
+  padding: 0;
+  position: relative;
+
+  .menu{
+
+    @media (min-width: $mobile-breakpoint) {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+    }
+
+  }
+
+  ul{
+
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+
+    @media (min-width: $mobile-breakpoint) {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+    }
+
+  }
+
+  ul.opening{
+
+    display: block;
+    height: 30px;
+
+  }
+
+  li{
+
+
+    @media (min-width: $mobile-breakpoint) {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+    }
+
+    a{
+
+      text-align: center;
+
+      @media (min-width: $mobile-breakpoint) {
+
+        padding: 1.5em 1.3em 1.5em 1.3em;
+        margin: 0;
+        border: none;
+
+      }
+
+    }
+
+    }
+
+
+  li:last-child{
+    border-bottom: none;
+  }
+
+  li a{
+
+    color: $font-color-main;
+    display: block;
+    padding: 1.5em 4em 1.5em 3em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    text-align: center;
+
+  }
+
+
+}
+
+.menu-toggle{
+
+  padding: 1em;
+  cursor: pointer;
+  width: 2.5em;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $mobile-breakpoint) {
+
+    display: none;
+
+  }
+
+}
+
+.hamburger, .hamburger::before, .hamburger::after{
+
+  content: '';
+  display: block;
+  background: $font-color-main;
+  height: 3px;
+  width: 2em;
+  border-radius: 3px;
+  -webkit-transition: all ease-in-out 350ms;
+  transition: all ease-in-out 350ms;
+
+}
+
+.hamburger::before{
+
+  -webkit-transform: translateY(-7px);
+  transform: translateY(-7px);
+
+}
+
+.hamburger::after{
+
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+
+}
+
+.open .hamburger{
+
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+}
+
+.open .hamburger::before{
+
+  display: none;
+
+}
+
+.open .hamburger::after{
+
+  -webkit-transform: translateY(-1px) rotate(-90deg);
+  transform: translateY(-1px) rotate(-90deg);
+
+}
+
+
+
+
